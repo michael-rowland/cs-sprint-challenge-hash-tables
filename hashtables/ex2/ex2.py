@@ -9,9 +9,9 @@ def reconstruct_trip(tickets, length):
     for ticket in tickets:
         storage[ticket.source] = ticket.destination
 
-    route = ['NONE']
-    next_stop = ''
-    while next_stop != 'NONE':
+    route = ["NONE"]
+    next_stop = ""
+    while next_stop != "NONE":
         next_stop = storage[route[-1]]
         route.append(next_stop)
     return route[1:]

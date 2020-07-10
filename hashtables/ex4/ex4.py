@@ -5,7 +5,7 @@ def has_negatives(a):
         if -num in opposites:
             correct.append(num)
         opposites[num] = -num
-    return [i if i>0 else -i for i in correct]
+    return [i if i > 0 else -i for i in correct]
 
 
 if __name__ == "__main__":
