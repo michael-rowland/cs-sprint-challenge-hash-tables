@@ -1,10 +1,12 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    counter = {}
+    for idx, array in enumerate(arrays):
+        for i in array:
+            if i not in counter:
+                counter[i] = []
+            counter[i].append(idx)
+    # there is probably a faster way to do this?
+    return [k for k, v in counter.items() if len(v) == len(arrays)]
 
 
 if __name__ == "__main__":

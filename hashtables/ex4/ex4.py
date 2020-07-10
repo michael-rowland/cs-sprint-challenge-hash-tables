@@ -1,10 +1,11 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    opposites = {}
+    correct = []
+    for num in a:
+        if -num in opposites:
+            correct.append(num)
+        opposites[num] = -num
+    return [i if i>0 else -i for i in correct]
 
 
 if __name__ == "__main__":
